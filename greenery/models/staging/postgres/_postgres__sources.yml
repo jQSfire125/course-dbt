@@ -1,0 +1,41 @@
+version: 2
+
+sources:
+
+  - name: src_postgres # name of the source (this can be named whatever you want, but should be descriptive.)
+    schema: public # this is the schema our raw data lives in
+    database: raw # this is the name of our database
+
+    quoting:
+      database: false
+      schema: false
+      identifier: false
+
+    freshness:
+      warn_after: {count: 24, period: hour}
+      error_after: {count: 48, period: hour}
+
+    tables:
+      - name: users 
+        loaded_at_field: created_at
+        description: >
+          Contains demographic information about each user. The primary key is user id.
+      - name: addresses
+      - name: events
+        loaded_at_field: created_at
+        description: >
+          Contains web events like checkout, add_to_cart, etc and the url where it happened. 
+      - name: orders
+        loaded_at_field: created_at
+        description: >
+          Contains order information like costs and shipping information.
+      - name: products
+        description: >
+          Contains information about items name, price, and inventory. 
+      - name: order_items
+        description: >
+          Contains how many items where ordered.
+      - name: promos
+        description: >
+          Contains information on promo status and discount.
+        
