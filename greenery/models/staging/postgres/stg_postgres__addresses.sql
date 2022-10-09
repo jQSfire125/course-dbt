@@ -8,7 +8,7 @@ source as (
 
 renamed as (
     select
-        address_id as address_uuid,
+        address_id as address_guid,
         address,
         zipcode,
         state,

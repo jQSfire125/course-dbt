@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: stg_postgres__users
+    description: Contains demographic information about each user.
+    columns:
+      - name: user_guid
+        description: unique identifier for a user.
+        tests:
+          - unique
+          - not_null
+      - name: first_name
+      - name: last_name
+      - name: email
+      - name: phone_number
+      - name: created_at_utc
+        tests:
+          - not_null
+      - name: updated_at_utc
+      - name: address_guid

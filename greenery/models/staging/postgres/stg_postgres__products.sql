@@ -10,7 +10,7 @@ renamed as (
 
     select
         product_id,
-        name,
+        name as product_name,
         price,
         inventory
         

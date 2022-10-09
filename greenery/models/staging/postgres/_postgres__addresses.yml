@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: stg_postgres__addresses
+    description: address, zipcode, state and country.
+    columns:
+      - name: address_guid
+        description: unique address identifier.
+        tests:
+          - unique
+          - not_null
+      - name: address
+      - name: zipcode
+      - name: state
+      - name: country
+      
