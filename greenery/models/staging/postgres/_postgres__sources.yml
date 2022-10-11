@@ -18,24 +18,20 @@ sources:
     tables:
       - name: users 
         loaded_at_field: created_at
-        description: >
-          Contains demographic information about each user. The primary key is user id.
+        description: Contains demographic information about each user. The primary key is user id.
       - name: addresses
+        description: Contains the users addresses.
       - name: events
         loaded_at_field: created_at
-        description: >
-          Contains web events like checkout, add_to_cart, etc and the url where it happened. 
+        description: Contains web events like checkout, add_to_cart, etc and the url where it happened. 
       - name: orders
         loaded_at_field: created_at
-        description: >
-          Contains order information like costs and shipping information.
+        description: Contains order information like costs and shipping information.
       - name: products
-        description: >
-          Contains information about items name, price, and inventory. 
+        description: Contains information about items name, price, and inventory. 
       - name: order_items
-        description: >
-          Contains how many items where ordered.
+        description: Contains how many items where ordered.
       - name: promos
-        description: >
-          Contains information on promo status and discount.
+        description: Contains information on promo status and discount.
+          
         
