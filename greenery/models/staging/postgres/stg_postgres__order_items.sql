@@ -12,7 +12,6 @@ renamed as (
         order_id,
         product_id,
         quantity
-        
     from source 
 
 )

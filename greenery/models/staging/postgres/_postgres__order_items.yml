@@ -9,4 +9,8 @@ models:
         tests:
           - not_null
       - name: product_id
+        tests:
+          - not_null
       - name: quantity
+        tests:
+          - not_null

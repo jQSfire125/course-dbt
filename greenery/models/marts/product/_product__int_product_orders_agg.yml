@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: int_product_orders_agg
+    description: This view aggregates orders and number of items ordered by product.
+    columns:
+      - name: product_id
+        description: unique id of the product.
+      - name: nb_orders
+        description: count of orders for the product.
+      - name: nb_products
+        description: the total number of items ordered of the product.

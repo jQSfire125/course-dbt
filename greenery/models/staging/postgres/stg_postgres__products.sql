@@ -13,7 +13,6 @@ renamed as (
         name as product_name,
         price,
         inventory
-        
     from source 
 
 )

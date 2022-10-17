@@ -13,7 +13,6 @@ renamed as (
         zipcode,
         state,
         country
-
     from source
 
 )

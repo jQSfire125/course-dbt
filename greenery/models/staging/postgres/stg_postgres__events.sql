@@ -17,7 +17,6 @@ renamed_recast as (
         created_at::timestampntz as created_at_utc,
         order_id,
         product_id
-
     from source
 
 )

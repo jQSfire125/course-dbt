@@ -10,7 +10,11 @@ models:
           - unique
           - not_null
       - name: session_id
+        description: unique session identifier.
+        tests:
+          - not_null
       - name: user_guid
+        description: unique identifier for a user.
         tests:
           - not_null
       - name: event_type
@@ -19,8 +23,10 @@ models:
           - not_null
       - name: page_url
       - name: created_at_utc
-        description: utc timestamp of the event.
+        description: the timestamp the event was created (utc).
         tests:
           - not_null
       - name: order_id
+        description: unique id of each order.
       - name: product_id
+        description: unique id of the product.

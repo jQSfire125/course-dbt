@@ -22,7 +22,6 @@ renamed_recast as (
         estimated_delivery_at::timestampntz as estimated_delivery_at_utc,
         delivered_at::timestampntz as delivered_at_utc,
         status as order_status
-        
     from source 
 
 )

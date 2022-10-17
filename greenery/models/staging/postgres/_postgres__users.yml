@@ -14,7 +14,10 @@ models:
       - name: email
       - name: phone_number
       - name: created_at_utc
+        description: the timestamp the user was created (utc).
         tests:
           - not_null
       - name: updated_at_utc
+        description: the timestamp the user was updated (utc).
       - name: address_guid
+        description: unique address identifier.

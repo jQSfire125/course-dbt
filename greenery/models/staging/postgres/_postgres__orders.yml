@@ -5,7 +5,8 @@ models:
     description: Contains order information like costs and shipping.
     columns:
       - name: order_id
-        description: Unique id of each order.
+        description: unique id of each order.
+        tests:
           - unique
           - not_null
       - name: promo_id
@@ -14,17 +15,25 @@ models:
         tests:
           - not_null
       - name: address_guid
+        description: unique address identifier.
       - name: created_at_utc
         description: utc timestamp of the order.
         tests:
           - not_null
       - name: order_cost
+        tests:
+          - not_null
       - name: shipping_cost
       - name: order_total
+        tests:
+          - not_null
+        description: the total value of the order including shipping.
       - name: tracking_id
       - name: shipping_service
       - name: estimated_delivery_at_utc
+        description: the estimated timestamp the order should be delivered (utc).
       - name: delivered_at_utc
+        description: the timestamp the order was delivered (utc).
       - name: order_status
         description: status of the order.
         tests:

@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: fact_product_orders
+    description: >
+      This table combines product information with the number of page_view and 
+      add_to_cart events as well as the number of orders and total number of items ordered by product.
+    columns:
+      - name: product_id
+        description: unique id of the product.
+        tests:
+          - unique
+          - not_null
+      - name: product_name
+      - name: price
+      - name: inventory
+      - name: page_views
+        description: count of page_view events for the product.
+        tests:
+          - positive_values
+      - name: add_to_carts
+        description: count of add_to_cart events for the product.
+        tests:
+          - positive_values
+      - name: nb_orders
+        description: the count of orders for the product.
+        tests:
+          - positive_values
+      - name: nb_products
+        description: the total number of items ordered of the product.
+        tests:
+          - positive_values

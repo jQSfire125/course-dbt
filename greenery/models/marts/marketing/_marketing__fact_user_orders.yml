@@ -1,0 +1,42 @@
+version: 2
+
+models:
+  - name: fact_user_orders
+    description: >
+      This table combines order information with total number of items in the order, user information
+      and whether or not the order had a promo applied.
+    columns:
+      - name: order_id
+        description: unique id of each order.
+        tests:
+          - unique
+          - not_null
+      - name: user_guid
+        description: unique identifier for a user.
+        tests:
+          - not_null
+      - name: address_guid
+        description: unique address identifier.
+      - name: first_name
+      - name: last_name
+      - name: email
+      - name: nb_items_order
+        description: total number of items in the order.
+        tests:
+          - positive_values
+      - name: order_total
+        description: the total value of the order including shipping.
+        tests:
+          - positive_values
+      - name: is_promo
+        description: whether or not the order had a promo applied.
+        tests:
+          - not_null
+      - name: order_created_at_utc
+        description: the timestamp the order was created (utc)
+      - name: order_status
+        description: the current status of the order.
+        tests:
+          - not_null
+
+      

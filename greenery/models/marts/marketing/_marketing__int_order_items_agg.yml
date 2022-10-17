@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: int_order_items_agg
+    description: In this view, we aggragate the total number of products in an order.
+    columns:
+      - name: order_id
+        description: unique id of each order.
+      - name: nb_items_order
+        description: the total number of items in an order.

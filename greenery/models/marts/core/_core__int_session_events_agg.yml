@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: int_session_events_agg
+    description: In this view, we aggragate types of events by session id and user id.
+    columns:
+      - name: user_guid
+        description: unique identifier for a user.
+      - name: session_id
+        description: unique session identifier.
+      - name: add_to_carts
+        description: count of add_to_cart events in the same session.
+      - name: checkouts
+        description: count of checkout events in the same session.
+      - name: package_shippeds
+        description: count of package_shipped events in the same session.
+      - name: page_views
+        description: count of page_view events in the same session.
