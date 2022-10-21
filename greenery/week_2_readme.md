@@ -35,7 +35,7 @@ A: We would run all the models on daily and would communicate via Slack on the #
 ### Part 3. dbt Snapshots
 ---
 Which orders changed from week 1 to week 2?
-A: These orders went from "preparing" to "shipped"
+A: These 3 orders went from "preparing" to "shipped":
 914b8929-e04a-40f8-86ee-357f2be3a2a2
 05202733-0e17-4726-97c2-0520c024ab85
 939767ac-357a-4bec-91f8-a7b25edd46c9
