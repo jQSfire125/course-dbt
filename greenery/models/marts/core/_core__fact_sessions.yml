@@ -38,6 +38,9 @@ models:
         description: the timestamp (utc) of the first event in the session.
       - name: last_event
         description: the timestamp (utc) of the last event in the session.
+        tests:
+          - later_than:
+              earlier_date: first_event
       - name: session_length_minutes
         description: the length of the session in minutes.
         tests:

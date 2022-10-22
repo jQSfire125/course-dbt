@@ -9,4 +9,3 @@ macros:
       - name: role
         type: <string>
         description: the role we want to grant.
-

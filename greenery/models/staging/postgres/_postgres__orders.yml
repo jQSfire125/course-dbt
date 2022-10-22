@@ -34,6 +34,9 @@ models:
         description: the estimated timestamp the order should be delivered (utc).
       - name: delivered_at_utc
         description: the timestamp the order was delivered (utc).
+        tests:
+          - later_than:
+              earlier_date: created_at_utc
       - name: order_status
         description: status of the order.
         tests:
