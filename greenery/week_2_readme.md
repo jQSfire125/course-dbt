@@ -1,7 +1,32 @@
 ### Part 1.Models
 ---
 What is our repeat user rate?
-A: 0.80
+A: 80%
+
+```sql
+with orders_customer as(
+    
+    select 
+        distinct user_guid as users, 
+        count(order_id) as nb_orders 
+    from DEV_DB.DBT_ROGELIOMONTEMAYOR.STG_POSTGRES__ORDERS
+    group by 1
+    
+),
+
+bucketing as (
+
+select 
+    users,
+    case when nb_orders >= 2 then 1 else 0 end as two_plus_purchases,
+    case when nb_orders = 1 then 1 else 0 end as one_purchase
+from orders_customer
+)
+
+select 
+    round(div0(sum(two_plus_purchases), count(distinct users)) * 100) as repeat_rate
+from bucketing;
+```
 
 What are good indicators of a user who will likely purchase again? What about indicators of users who are likely NOT to purchase again? If you had more data, what features would you want to look into to answer this question?
 A: I would try to look at the time between purchases, patterns for repeat users. Maybe page views could be a good indicator. With more data, we could probably build a model that tries predict purchases and see which features are more imporant in the model. 
@@ -36,6 +61,6 @@ A: We would run all the models on daily and would communicate via Slack on the #
 ---
 Which orders changed from week 1 to week 2?
 A: These 3 orders went from "preparing" to "shipped":
-914b8929-e04a-40f8-86ee-357f2be3a2a2
-05202733-0e17-4726-97c2-0520c024ab85
-939767ac-357a-4bec-91f8-a7b25edd46c9
+* 914b8929-e04a-40f8-86ee-357f2be3a2a2
+* 05202733-0e17-4726-97c2-0520c024ab85
+* 939767ac-357a-4bec-91f8-a7b25edd46c9

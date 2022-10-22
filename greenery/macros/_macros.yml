@@ -1,0 +1,12 @@
+version: 2
+
+macros:
+  - name: grant_role
+    description: grants select role to the table applied.
+    docs:
+      show: true
+    arguments:
+      - name: role
+        type: <string>
+        description: the role we want to grant.
+

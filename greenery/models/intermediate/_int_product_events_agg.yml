@@ -6,7 +6,7 @@ models:
     columns:
       - name: product_id
         description: unique id of the product.
-      - name: add_to_carts
-        description: count of add_to_cart events for the product.
       - name: page_views
         description: count of page_view events for the product.
+      - name: add_to_carts
+        description: count of add_to_cart events for the product.

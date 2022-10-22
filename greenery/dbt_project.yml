@@ -40,4 +40,4 @@ models:
     marts:
       +materialized: table
       +post-hook: 
-        - "GRANT SELECT ON {{ this }} TO ROLE reporting"
+        - "{{ grant_role('reporting') }}"

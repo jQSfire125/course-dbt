@@ -1,9 +1,3 @@
-{{
-  config(
-    materialized = 'view'
-  )
-}}
-
 with orders as (
 
   select * from {{ ref('stg_postgres__orders') }}
@@ -33,7 +27,7 @@ final as (
   select 
     product_id,
     count(order_id) as nb_orders,
-    sum(quantity) as nb_products
+    sum(quantity) as nb_units
   from orders_and_order_items
   group by 1
 

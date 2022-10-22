@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: int_product_conversion_agg
+    description: >
+      This view has a line for every session with a page_view or checkout event. It allows us to 
+      calculate conversion (checkout sessions / page_view sessions) at the product level.
+    columns:
+      - name: product_id
+        description: unique id of the product.
+      - name: purchase_sessions
+        description: number of sessions where the product had a checkout event.
+      - name: page_view_sessions
+        description: number of sessions that the product had a page_view event.

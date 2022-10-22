@@ -8,5 +8,5 @@ models:
         description: unique id of the product.
       - name: nb_orders
         description: count of orders for the product.
-      - name: nb_products
+      - name: nb_units
         description: the total number of items ordered of the product.

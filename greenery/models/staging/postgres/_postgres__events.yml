@@ -18,7 +18,7 @@ models:
         tests:
           - not_null
       - name: event_type
-        description: Type of event.
+        description: Type of event (checkout, page_view, add_to_cart, etc.).
         tests:
           - not_null
       - name: page_url
