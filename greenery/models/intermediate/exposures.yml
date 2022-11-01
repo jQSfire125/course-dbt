@@ -1,0 +1,16 @@
+version: 2
+
+exposures:  
+  - name: Funnel Dashboard
+    description: >
+      Top product funnel and funnel by state or zip code. 
+    url: https://app.sigmacomputing.com/corise-dbt/workbook/workbook-3ZiEZV54sCXIYbYiF2ayIZ
+    type: dashboard
+    maturity: medium
+    depends_on:
+      - ref('stg_postgres__events')
+      - ref('stg_postgres__users')
+      - ref('stg_postgres__addresses')
+    owner:
+      name: Rogelio Montemayor
+      email: rogelio@greenery.com
